@@ -8,12 +8,74 @@
     <link rel="stylesheet" href="main.css">
 
     <style> 
+
+
     .table {
-        width: 60%;
+        width: 75%;
         margin: auto;
         padding: 10px;
+        text-align: center;
+    }
+
+    .table2 {
+        width: 90%;
+        margin: auto;
+        text-align: center;
+        margin-top: 30px;
+        background: linear-gradient(to right, rgba(244, 114, 38, 0.872), white, rgb(18, 18, 223));
+    }
+
+    .knopka {
+        font-weight: bold;
+        border: 1px solid;
+        border-radius: 6px;
+        cursor: pointer;
+        background: linear-gradient(to right, rgba(244, 114, 38, 0.872), white, rgb(18, 18, 223));
+        display: inline-block;
+        text-align: center;
+        width: 200px;
+        height: 50px;
+        margin: 20px 15px 5px 240px;
+        font-size: 15px;
+        padding: 7px;
+        opacity: 85%;
     }
     </style>
+
+    <script>
+
+        let znach = [1.625,1.610,1.714,1.685,1.705,1.724,
+        1.729,1.777,1.811,1.775,1.845,1.843,1.815,1.790,
+        1.743,1.741,1.738,1.741,1.764,1.714]; 
+
+        let znach2 = [1.575,1.588,1.645,1.651,1.681,1.71,1.681,
+        1.7,1.791,1.75,1.794,1.806,1.773,1.759,1.721,1.74,1.73,
+        1.733,1.741,1.7,1.646,1.640,1.924,1.726,1.714,1.741,1.859,
+        1.847,1.870,1.834,1.883,1.854,1.854,1.827,1.789,1.761,1.749,
+        1.764,1.842,1.786];
+
+        function Maximum(znach){ 
+            let Max = Math.max.apply(null, znach2); 
+            let VivodMax = document.getElementById("ResultMax"); 
+            VivodMax.innerHTML = "Максимальное значение за апрель: " + Max;
+        } 
+        function Minimum(znach){ 
+            let Min = Math.min.apply(null, znach2); 
+            let VivodMin = document.getElementById("ResultMin"); 
+            VivodMin.innerHTML = "Минимальное значение за апрель: " + Min;
+        } 
+        function ShowDisp (znach){ 
+            let sum = znach.map(i=>x+=i, x=0).reverse()[0] 
+            let kolvozn = znach.length 
+            let midl = sum/kolvozn 
+            let zn = znach.map(i=>x+=(i-midl)**2, x=0).reverse()[0] 
+            let sr_kv_2 = zn/kolvozn 
+            let otkl = Math.sqrt(sr_kv_2) 
+            let VivodDisp = document.getElementById("ResultDisp"); 
+            VivodDisp.innerHTML = "Среднеквадратическое за апрель: " + otkl;
+        }
+
+    </script>
 </head>
 
 <body>
@@ -47,7 +109,7 @@
                           выпуска)*</span>
                 </th>
                 <th>Объем выпуска, штук</th>
-                <th>Рыночная цена (3) на 31.03.2023, руб.</th>
+                <th>Рыночная цена на 31.03.2023, руб.</th>
                 <th>Капитализация, руб.</th>
             </tr>
 
@@ -60,7 +122,216 @@
                 <td>1,578</td>
                 <td>27 178 064 114,71</td>
             </tr>
+
+        
+
+        <table border="1" class="table2">
+            <tr>
+                <th><b>Дата</b><br></th>
+                <th>Миниамльная цена</th>
+                <th>Максимальная цена</th>
+                <th>Цена закрытия</th>
+                <th>Оборот</th>
+                <th>Количество сделок</th>
+            </tr>
+
+                <tr>
+                    <td>03.04.2023</td>
+                    <td>1,575</td>
+                    <td>1,646</td>
+                    <td>1,625</td>
+                    <td>40 040 893</td>
+                    <td>3 070</td>
+                </tr>
+
+            <tr>
+                <td>04.04.2023</td>
+                <td>1,588</td>
+                <td>1,640</td>
+                <td>1,610</td>
+                <td>19 846 265</td>
+                <td>1 784</td>
+            </tr>
+
+            <tr>
+                <td>05.04.2023</td>
+                <td>1,645</td>
+                <td>1,924</td>
+                <td>1,714</td>
+                <td>449 271 802</td>
+                <td>29 312</td>
+            </tr>
+
+            <tr>
+                <td>06.04.2023</td>
+                <td>1,651</td>
+                <td>1,726</td>
+                <td>1,685</td>
+                <td>37 943 310</td>
+                <td>3 075</td>
+            </tr>
+
+            <tr>
+                <td>07.04.2023</td>
+                <td>1,681</td>
+                <td>1,714</td>
+                <td>1,705</td>
+                <td>12 898 481</td>
+                <td>1 351</td>
+            </tr>
+
+            <tr>
+                <td>10.04.2023</td>
+                <td>1,710</td>
+                <td>1,741</td>
+                <td>1,724</td>
+                <td>14 091 267</td>
+                <td>1 262</td>
+            </tr>
+
+            <tr>
+                <td>11.04.2023</td>
+                <td>1,681</td>
+                <td>1,859</td>
+                <td>1,729</td>
+                <td>89 737 394</td>
+                <td>6 381</td>
+            </tr>
+
+            <tr>
+                <td>12.04.2023</td>
+                <td>1,700</td>
+                <td>1,847</td>
+                <td>1,777</td>
+                <td>52 109 608</td>
+                <td>3 800</td>
+            </tr>
+
+            <tr>
+                <td>13.04.2023</td>
+                <td>1,791</td>
+                <td>1,870</td>
+                <td>1,811</td>
+                <td>55 202 999</td>
+                <td>3 481</td>
+            </tr>
+
+            <tr>
+                <td>14.04.2023</td>
+                <td>1,750</td>
+                <td>1,834</td>
+                <td>1,775</td>
+                <td>14 639 877</td>
+                <td>1 298</td>
+            </tr>
+
+            <tr>
+                <td>17.04.2023</td>
+                <td>1,794</td>
+                <td>1,883</td>
+                <td>1,845</td>
+                <td>51 560 464</td>
+                <td>3 406</td>
+            </tr>
+
+            <tr>
+                <td>18.04.2023</td>
+                <td>1,806</td>
+                <td>1,854</td>
+                <td>1,843</td>
+                <td>24 283 247</td>
+                <td>1 841</td>
+            </tr>
+
+            <tr>
+                <td>19.04.2023</td>
+                <td>1,773</td>
+                <td>1,854</td>
+                <td>1,815</td>
+                <td>16 442 614</td>
+                <td>1 600</td>
+            </tr>
+
+            <tr>
+                <td>20.04.2023</td>
+                <td>1,759</td>
+                <td>1,827</td>
+                <td>1,790</td>
+                <td>11 684 660</td>
+                <td>1 036</td>
+            </tr>
+
+            <tr>
+                <td>21.04.2023</td>
+                <td>1,721</td>
+                <td>1,789</td>
+                <td>1,743</td>
+                <td>23 053 468</td>
+                <td>2 069</td>
+            </tr>
+
+            <tr>
+                <td>24.04.2023</td>
+                <td>1,740</td>
+                <td>1,761</td>
+                <td>1,741</td>
+                <td>10 194 389</td>
+                <td>1 119</td>
+            </tr>
+
+            <tr>
+                <td>25.04.2023</td>
+                <td>1,730</td>
+                <td>1,749</td>
+                <td>1,738</td>
+                <td>5 145 867</td>
+                <td>515</td>
+            </tr>
+
+            <tr>
+                <td>26.04.2023</td>
+                <td>1,733</td>
+                <td>1,764</td>
+                <td>1,741</td>
+                <td>6 353 075</td>
+                <td>578</td>
+            </tr>
+
+            <tr>
+                <td>27.04.2023</td>
+                <td>1,741</td>
+                <td>1,842</td>
+                <td>1,764</td>
+                <td>53 782 442</td>
+                <td>3 612</td>
+            </tr>
+
+            <tr>
+                <td>28.04.2023</td>
+                <td>1,700</td>
+                <td>1,786</td>
+                <td>1,714</td>
+                <td>12 445 825</td>
+                <td>1 161</td>
+            </tr>
+
+        <h2 style="margin: 70px 150px 20px 150px; text-align: center;"><u>Акции ДЭК (DVEC) за апрель</u></h2>
+
+        <div>
+            <div class="knopka" onclick="Minimum(znach2)">Минимальная цена за апрель</div>
+            <div id="ResultMin"></div>
+
+            <div class="knopka" onclick="Maximum(znach2)">Максимальная цена за апрель</div>
+            <div id="ResultMax"></div>
+
+            <div class="knopka" onclick="ShowDisp(znach)"> Среднеквадратическое отклонение цены</div>
+            <div id="ResultDisp"></div>
+        </div>
+
+        
+
     </main>
+
 
 
 </body>

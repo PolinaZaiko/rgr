@@ -51,13 +51,13 @@ a {
     text-shadow: 3px 3px 3px gray;
     font-weight: bold;
     margin-right: 30px;
-    font-size: 25px;
+    font-size: 30px;
 
 }
 
 a:hover {
     color: rgb(239, 83, 27);
-    font-size: 28px;
+    font-size: 33px;
 }
 
 a:active {
