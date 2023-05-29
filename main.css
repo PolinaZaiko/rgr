@@ -20,10 +20,11 @@ header {
     right: 0;
     top: 0;
     margin: 0px;
+    z-index: 2;
 }
 
 main {
-    margin: 250px 20px;
+    margin: 270px 20px;
 }
 
 div {

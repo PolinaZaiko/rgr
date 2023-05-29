@@ -22,12 +22,12 @@
         function Maximum(znach){ 
             let Max = Math.max.apply(null, znach2); 
             let VivodMax = document.getElementById("ResultMax"); 
-            VivodMax.innerHTML = "Максимальное значение за апрель: " + Max;
+            VivodMax.innerHTML = "Максимальная цена: " + Max;
         } 
         function Minimum(znach){ 
             let Min = Math.min.apply(null, znach2); 
             let VivodMin = document.getElementById("ResultMin"); 
-            VivodMin.innerHTML = "Минимальное значение за апрель: " + Min;
+            VivodMin.innerHTML = "Минимальная цена: " + Min;
         } 
         function ShowDisp (znach){ 
             let sum = znach.map(i=>x+=i, x=0).reverse()[0];
@@ -37,12 +37,18 @@
             let sr_kv_2 = zn/kolvozn;
             let otkl = Math.sqrt(sr_kv_2);
             let VivodDisp = document.getElementById("ResultDisp"); 
-            VivodDisp.innerHTML = "Среднеквадратическое за апрель: " + otkl;
+            VivodDisp.innerHTML = "Среднеквадратическое: " + otkl;
         }
 
     </script>
 
     <style> 
+    
+        .vivdo {
+            font-family: bold;
+            font-size: 15px ;
+        }
+
         .table {
             width: 75%;
             margin: auto;
@@ -60,26 +66,33 @@
 
         .knopka {
             font-weight: bold;
-            border: 1px solid;
             border-radius: 6px;
             cursor: pointer;
             background: linear-gradient(to right, rgba(244, 114, 38, 0.872), white, rgb(18, 18, 223));
-            display: inline-block;
             text-align: center;
+            margin: 50px 150px 0px 150px;
             width: 200px;
             height: 50px;
-            margin: 20px 15px 5px 240px;
-            font-size: 15px;
-            padding: 7px;
-            opacity: 85%;
+            padding: 15px;
+            border: 1px solid;
+            display: inline-block;
         }
+
+        .vivodknopki {
+            margin-top: 20px;
+            font-weight: bold;
+            margin-left: 150px;
+            text-align: center;
+
+        }
+
     </style>
 </head>
 
 <body>
-    <header>
+    <header> 
         <img src="logo.png" class="logo">
-        <ul class="menu">
+        <ul>
             <li class="current"><a href="index.html">О компании</a></li>
             <li class="current"><a href="2.html" style="color: rgb(239, 83, 27);">Основные финансовые показатели</a></li></li>
             <li class="current"><a href="3.html">Контактные данные</a></li></li>
@@ -92,7 +105,8 @@
             Основные финансовые показатели
         </h1>
 
-        <h2 style="margin: 70px 150px 20px 150px; text-align: center;"><u>Рыночная капитализация ценных бумаг по итогам торгов на
+        <h2 style="margin: 70px 150px 20px 150px; text-align: center;"><u>
+            Рыночная капитализация ценных бумаг по итогам торгов на
             фондовом рынке ПАО Московская Биржа на конец I квартала 2023 года</u></h2>
 
         <table border="1" class="table">
@@ -120,8 +134,9 @@
                 <td>1,578</td>
                 <td>27 178 064 114,71</td>
             </tr>
+        </table>
 
-        
+        <h2 style="margin: 70px 150px 20px 150px; text-align: center;"><u>Акции ДЭК (DVEC) за апрель</u></h2>
 
         <table border="1" class="table2">
             <tr>
@@ -312,21 +327,29 @@
                 <td>12 445 825</td>
                 <td>1 161</td>
             </tr>
+        </table>
 
-        <h2 style="margin: 70px 150px 20px 150px; text-align: center;"><u>Акции ДЭК (DVEC) за апрель</u></h2>
 
-        <div>
-            <div class="knopka" onclick="Minimum(znach2)">Минимальная цена за апрель</div>
-            <div id="ResultMin"></div>
-
-            <div class="knopka" onclick="Maximum(znach2)">Максимальная цена за апрель</div>
-            <div id="ResultMax"></div>
-
-            <div class="knopka" onclick="ShowDisp(znach)">Среднеквадратическое отклонение цены</div>
-            <div id="ResultDisp"></div>
+        <div class="vivodknopki">
+            <div>
+                <div  class="knopka" onclick="Minimum(znach2)">Минимальная цена за апрель</div>
+                <div id="ResultMin" class="vivodknopki"></div>
+            </div>
+            <div>
+                <div  class="knopka" onclick="Maximum(znach2)">Максимальная цена за апрель</div>
+                <div id="ResultMax" class="vivodknopki"></div>
+            </div>
+            <div>
+                <div  class="knopka" onclick="ShowDisp(znach)">Среднеквадратическое отклонение цены</div>
+                <div id="ResultDisp" class="vivodknopki"></div>
+            </div>
         </div>
 
-        
+        <!-- <div >
+            <div id="ResultMin" class="vivodknopki"></div>
+            <div id="ResultMax" class="vivodknopki"></div>
+            <div id="ResultDisp" class="vivodknopki"></div>
+        </div> -->
 
     </main>
 
