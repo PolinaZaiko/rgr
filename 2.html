@@ -19,17 +19,17 @@
         1.847,1.870,1.834,1.883,1.854,1.854,1.827,1.789,1.761,1.749,
         1.764,1.842,1.786];
 
-        function Maximum(znach){ 
+        function Maximum(znach) { 
             let Max = Math.max.apply(null, znach2); 
             let VivodMax = document.getElementById("ResultMax"); 
             VivodMax.innerHTML = "Максимальная цена: " + Max;
         } 
-        function Minimum(znach){ 
+        function Minimum(znach) { 
             let Min = Math.min.apply(null, znach2); 
             let VivodMin = document.getElementById("ResultMin"); 
             VivodMin.innerHTML = "Минимальная цена: " + Min;
         } 
-        function ShowDisp (znach){ 
+        function ShowDisp (znach) { 
             let sum = znach.map(i=>x+=i, x=0).reverse()[0];
             let kolvozn = znach.length;
             let midl = sum/kolvozn;
@@ -44,11 +44,6 @@
 
     <style> 
     
-        .vivdo {
-            font-family: bold;
-            font-size: 15px ;
-        }
-
         .table {
             width: 75%;
             margin: auto;
@@ -70,20 +65,18 @@
             cursor: pointer;
             background: linear-gradient(to right, rgba(244, 114, 38, 0.872), white, rgb(18, 18, 223));
             text-align: center;
-            margin: 50px 150px 0px 150px;
             width: 200px;
             height: 50px;
             padding: 15px;
             border: 1px solid;
             display: inline-block;
+            margin-top: 30px;
         }
 
         .vivodknopki {
-            margin-top: 20px;
+            display: block;
             font-weight: bold;
-            margin-left: 150px;
             text-align: center;
-
         }
 
     </style>
