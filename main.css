@@ -31,21 +31,6 @@ div {
     margin-top: 10px;
 }
 
- /*footer {
-    background-image: linear-gradient(to right, rgba(244, 114, 38, 0.872), white, rgb(18, 18, 223));
-    color: rgb(0, 41, 189); 
-    padding: 15px; 
-    font-size: 16pt; 
-    font-style: italic; 
-    text-align: right;
-    transition: 300ms;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    } */ 
-
-
 a {
     color: rgb(16, 10, 201);
     text-decoration: none;   
@@ -53,7 +38,6 @@ a {
     font-weight: bold;
     margin-right: 30px;
     font-size: 30px;
-
 }
 
 a:hover {
@@ -65,7 +49,6 @@ a:active {
     color: rgb(239, 83, 27);
     font-size: 28px;
 }
-
 
 .logo {
     left: 1px;
